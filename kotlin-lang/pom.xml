@@ -15,6 +15,7 @@
     <properties>
         <kotlin.version>1.2.21</kotlin.version>
         <kotlinx.coroutines.version>0.22.3</kotlinx.coroutines.version>
+        <serialization.version>0.4.1</serialization.version>
     </properties>
 
     <dependencyManagement>
@@ -118,6 +119,12 @@
             </dependency>
 
             <dependency>
+                <groupId>org.jetbrains.kotlinx</groupId>
+                <artifactId>kotlinx-serialization-runtime</artifactId>
+                <version>${serialization.version}</version>
+            </dependency>
+
+            <dependency>
                 <groupId>org.jetbrains.kotlin</groupId>
                 <artifactId>kotlin-test</artifactId>
                 <version>${kotlin.version}</version>
@@ -135,13 +142,6 @@
                 <version>${kotlin.version}</version>
                 <scope>test</scope>
             </dependency>
-
-            <dependency>
-                <groupId>org.jetbrains.kotlin</groupId>
-                <artifactId>kotlin-maven-plugin</artifactId>
-                <version>${kotlin.version}</version>
-                <type>maven-plugin</type>
-            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -152,6 +152,9 @@
                     <groupId>org.jetbrains.kotlin</groupId>
                     <artifactId>kotlin-maven-plugin</artifactId>
                     <version>${kotlin.version}</version>
+
+                    <!-- There is absolutely no way to provide plugin dependency versions with Maven -->
+                    <!-- and there is no hope that the required feature will be introduced in Maven -->
                 </plugin>
             </plugins>
         </pluginManagement>
