@@ -73,6 +73,21 @@
             </dependency>
             <dependency>
                 <groupId>org.jetbrains.kotlinx</groupId>
+                <artifactId>kotlinx-coroutines-jdk8</artifactId>
+                <version>${kotlinx.coroutines.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jetbrains.kotlinx</groupId>
+                <artifactId>kotlinx-coroutines-quasar</artifactId>
+                <version>${kotlinx.coroutines.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jetbrains.kotlinx</groupId>
+                <artifactId>kotlinx-coroutines-nio</artifactId>
+                <version>${kotlinx.coroutines.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jetbrains.kotlinx</groupId>
                 <artifactId>kotlinx-coroutines-rx2</artifactId>
                 <version>${kotlinx.coroutines.version}</version>
             </dependency>
